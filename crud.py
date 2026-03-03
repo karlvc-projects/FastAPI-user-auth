@@ -72,6 +72,8 @@ async def forget_password_mail(db:Session, email):
         return False, 'user does not exist'
 
 
+
+# adding comment just to make changes
 def verify_otp(otp, db):
     check_otp = db.query(models.ForgetPasswordOTP).filter(models.ForgetPasswordOTP.otp == otp).first()
     if check_otp:
